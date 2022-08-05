@@ -43,5 +43,5 @@ Visualisointia tehtiin Jupyter Notebookilla (python ohjelmoinnilla) ja MongoDB A
 ### Kaavio toteutuksesta
 
 <p align="center">
-![image](https://user-images.githubusercontent.com/110663840/183085528-6e82c9a7-44bd-4bf8-ad24-169def3f99c0.png)
+<img src="https://user-images.githubusercontent.com/110663840/183087903-71838152-038a-4fda-b9b0-7e28f7559063.png" width="750" height="392">
 </p>
