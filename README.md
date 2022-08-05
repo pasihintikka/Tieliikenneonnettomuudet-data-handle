@@ -8,7 +8,8 @@ Avoindata.fi sivuilta kokosin Väyläviraston tarjoamat csv -muotoiset vuosittai
 - Paikkatieto kansallisessa formaatissa ei ole yhteensopiva yleisten visualisointityökalujen kanssa.
 - Tieto vuosittaisissa tiedostoissa, joissa yli sata tietosaraketta. Uusimmissa tiedostoissa lisätty uusia tietosarakkeita. Tiedostoista alle puoletkaan eivät sopineet MongoDB ilmaiseen tallennustilaan.
 - Tiedostoissa jonkin verran syöttö- tai keräysvirheitä sekä jonkin verran puuttuvia tietoja.
-- Tilastokeskukselta löytyi hakuehdoilla tallennettavaksi csv –muotoinen tiedosto maakuntien asukasmääristä. Maakunnat mukana onnettomuuksien tapahtuma-alueita määrittelevissä tiedoissa.
+
+Tilastokeskukselta löytyi hakuehdoilla tallennettavaksi csv –muotoinen tiedosto maakuntien asukasmääristä. Maakunnat mukana onnettomuuksien tapahtuma-alueita määrittelevissä tiedoissa.
 - Tiedoston muoto vaati muokkaamista, jotta tallennus tietokantatauluun ja yhteensopivaksi muiden tietokannassa olevien tietojen kanssa oli mahdollista.
 
 ### Tietovarastot
