@@ -38,4 +38,4 @@ Visualisointia tehtiin Jupyter Notebookilla (python ohjelmoinnilla) ja MongoDB A
 - Jupyter Notebookissa visualisointiin tarvittavat tiedot haettiin SQL Server tietokannasta python koodilla joko tekemällä haun yhteydessä SQL kysely tai käyttämällä muutamaa SQL serveriin tallennettua Viewiä tai Stored Proceduria
 - MongoDB Atlaksen tietovarastoon tallennettiin python koodilla muutamia Collectioneja, joiden sisältö määriteltiin tallennusta varten tehtävän tiedoston SQL kyselyssä joko tekemällä haun yhteydessä SQL kysely tai käyttämällä muutamaa SQL serveriin tallennettua Viewiä tai Stored Proceduria
 - SQL Serverin Viewit sisälsivät sellaisia yleisiä tietokenttiä, joista visualisoinnin yleisimmät tarpeet täyttyvät.
-- SQL Serverin Stored Procedurit sisälsivät hiueman enemmän tietokenttiä, mutta haun määrittelyssä on annettava tieto minkä vuoden tietoja haku koskee.
+- SQL Serverin Stored Procedurit sisälsivät hieman enemmän tietokenttiä, mutta haun kutsussa on annettava muuttujana tieto minkä vuoden tietoja haku koskee.
