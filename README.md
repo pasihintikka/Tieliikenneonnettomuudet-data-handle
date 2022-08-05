@@ -1,6 +1,6 @@
 # Harjoitus: Tieliikenneonnettomuuksien datan käsittely
 
-Opiframe Oy:n järjestämässä Data-analytiikan osaaja koulutuksessa projektitehtävän tarkoituksena on käsitellä jotain mitattua tai verkosta hankkittua dataa ja tehdä siitä jothopäätöksiä data-analytiikan keinoin. 
+Opiframe Oy:n järjestämässä Data-analytiikan osaaja koulutuksessa projektitehtävän tarkoituksena on käsitellä jotain mitattua tai verkosta hankkittua dataa ja tehdä siitä johtopäätöksiä data-analytiikan keinoin. 
 
 ### Lähdedata
 
