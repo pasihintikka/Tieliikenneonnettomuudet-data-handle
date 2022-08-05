@@ -25,7 +25,7 @@ SQL Server tietokantaan tehtyjen kyselyjen perusteella luotuja datatiedostoja ta
 
 ### Tietojen käsittely
 
-Käisttelyyn luotiin eri tarkoituksia varten omia python koodeja. Koodit on tehty Jupyter Notebookissa.
+Käsittelyyn luotiin eri tarkoituksia varten python koodeja. Koodit on tehty Jupyter Notebookissa.
 - Paikkatiedon muunnokset kansallisesta kansainväliseen formaattiin (Coord_Conversion_for_Files.ipynb)
 - Muunnoksen jälkeen tiedostot pilkottiin kolmeen osaan luotujen tietokannan taulujen mukaan (Editing_Files_for_DB.ipynb)
 - Ennen tietokantaan vientiä pilkotuista tiedostoista tarkistettiin sisältövirheitä ja sarake-eroja, jotka aiheuttavat virheitä tietokantaan viennissä (Check_file_error.ipynb ja Check_file_columns.ipynb)
