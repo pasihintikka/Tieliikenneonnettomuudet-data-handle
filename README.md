@@ -37,8 +37,8 @@ Käsittelyyn luotiin eri tarkoituksia varten python koodeja. Koodit on tehty Jup
 Raportoinnnissa tietoa pyritään analysoimaan etsimällä siinä esiintyviä piirteitä, ominaisuuksia ja niiden keskinäisiä riippuvuuksia. Analysointia merkittävästi helpottaa, jos haluttuja asioita visualisoidaan. Visualisointia tehtiin sekä Pythonilla (Jupyter Notebook) ja MongoDB Atlaksella
 - Jupyter Notebookissa visualisointiin tarvittavat tiedot haettiin SQL Server tietokannasta python koodilla joko tekemällä haun yhteydessä SQL kysely tai käyttämällä muutamaa SQL serveriin tallennettua Viewiä tai Stored Proceduria
 - MongoDB Atlaksen tietovarastoon tallennettiin python koodilla muutamia kokoelmia, joiden sisältö määriteltiin tallennusta varten tehtävän tiedoston SQL kyselyssä joko tekemällä haun yhteydessä SQL kysely tai käyttämällä muutamaa SQL serveriin tallennettua Viewiä tai Stored Proceduria
-- SQL Serverin Viewit sisälsivät sellaisia tietokenttiä, joista visualisoinnin yleisimmät tarpeet täyttyvät.
-- SQL Serverin Stored Procedurit sisälsivät enemmän tietokenttiä, hakua rajoitettiin kutsussa muuttujana annettavan tiedon mukaan (Vuosi).
+- SQL Serverin Viewit sisälsivät sellaisia tietokenttiä, joilla visualisoinnin yleisimmät tarpeet täyttyvät.
+- SQL Serverin Stored Procedurit sisälsivät enemmän tietokenttiä, hakua rajoitettiin sen kutsussa muuttujana annettavan tiedon mukaan (Vuosi).
 
 ### Kaavio toteutuksesta
 
