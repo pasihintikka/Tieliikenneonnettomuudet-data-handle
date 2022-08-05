@@ -32,9 +32,9 @@ Käsittelyyn luotiin eri tarkoituksia varten python koodeja. Koodit on tehty Jup
 - Osa vuosittaisista tiedostoista voitiin pilkkomisen jälkeen yhdistää yhdeksi (File_merge_for_DB.ipynb)
 - Tiedostojen siirtoon SQL Serveriin ja MongoDB Atlakseen sekä niistä haku takaisin tiedostoiksi (Insert_data_to_sqlserver.ipynb, Insert_Data_to_MongoDB.ipynb ja Get_Data_from_MongoDB.ipynb)
 
-### Tietojen visualisointi
+### Tietojen raportointi
 
-Visualisointia tehtiin sekä Pythonilla (Jupyter Notebook) ja MongoDB Atlaksella
+Raportoinnnissa tietoa pyritään analysoimaan etsimällä siinä esiintyviä piirteitä, ominaisuuksia ja niiden keskinäisiä riippuvuuksia. Analysointia merkittävästi helpottaa, jos haluttuja asioita visualisoidaan. Visualisointia tehtiin sekä Pythonilla (Jupyter Notebook) ja MongoDB Atlaksella
 - Jupyter Notebookissa visualisointiin tarvittavat tiedot haettiin SQL Server tietokannasta python koodilla joko tekemällä haun yhteydessä SQL kysely tai käyttämällä muutamaa SQL serveriin tallennettua Viewiä tai Stored Proceduria
 - MongoDB Atlaksen tietovarastoon tallennettiin python koodilla muutamia kokoelmia, joiden sisältö määriteltiin tallennusta varten tehtävän tiedoston SQL kyselyssä joko tekemällä haun yhteydessä SQL kysely tai käyttämällä muutamaa SQL serveriin tallennettua Viewiä tai Stored Proceduria
 - SQL Serverin Viewit sisälsivät sellaisia tietokenttiä, joista visualisoinnin yleisimmät tarpeet täyttyvät.
