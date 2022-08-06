@@ -15,7 +15,7 @@ CREATE TABLE Onnettomuudet
    tieomin_id INT,
    Vuosi INT,
    Kk INT,
-   P‰iv‰ VARCHAR(10),
+   P√§iv√§ VARCHAR(10),
    Kuolleet INT,
    Loukkaant INT,
    Vakavuusko INT,
@@ -32,16 +32,16 @@ CREATE TABLE Onnettomuudet
    Pintasel VARCHAR(25),
    Valoisuus INT,
    Valsel VARCHAR(25),
-   S‰‰ INT,
-   S‰‰sel VARCHAR(25),
+   S√§√§ INT,
+   S√§√§sel VARCHAR(25),
    Onnpaikka INT,
    Onnpaiksel VARCHAR(25),
-   L‰mpˆtila NUMERIC(4,1),
+   L√§mp√∂tila NUMERIC(4,1),
    Katuosoite VARCHAR(50),
    [position.lat] NUMERIC(18,9),
    [position.lon] NUMERIC(18,9),
    Alkoholi INT,
-   J‰rjnro INT,
+   J√§rjnro INT,
    Jutuntunn VARCHAR(10),
    Solmunro NUMERIC(10,1));
 */
@@ -56,8 +56,8 @@ CREATE TABLE Osalliset
    Osnro INT,
    Oslaji INT,
    Oslajisel VARCHAR(50),
-   Per‰v INT,
-   Per‰vsel VARCHAR(50),
+   Per√§v INT,
+   Per√§vsel VARCHAR(50),
    Ajolaji INT,
    Ajolajisel VARCHAR(50),
    Kuollut INT,
@@ -115,9 +115,9 @@ CREATE TABLE Tieomin
    Raskaskvl NUMERIC(10,1),
    Tienlev NUMERIC(10,1),
    Oslakpvm VARCHAR(20),
-   Tietyˆ VARCHAR(10),
-   P‰‰llyste INT,
-   P‰‰llsel VARCHAR(50),
+   Tiety√∂ VARCHAR(10),
+   P√§√§llyste INT,
+   P√§√§llsel VARCHAR(50),
    Risteys INT,
    Risteyssel VARCHAR(50),
    Rautatie INT,
@@ -130,17 +130,17 @@ CREATE TABLE Tieomin
    Talvhoitsel VARCHAR(50),
    Tienverkas INT,
    Tienverkse VARCHAR(50),
-   Maank‰yttˆ INT,
-   Maank‰ytse VARCHAR(50),
+   Maank√§ytt√∂ INT,
+   Maank√§ytse VARCHAR(50),
    Valoohjaus INT,
    Valoohjsel VARCHAR(50),
-   Lis‰kaisty INT,
-   Lis‰kaisse VARCHAR(50),
+   Lis√§kaisty INT,
+   Lis√§kaisse VARCHAR(50),
    Solmutyyp INT,
    Solmutyyps VARCHAR(50),
    Liitluok INT,
    Liitlksel VARCHAR(50),
-   L‰hliittie NUMERIC(10,1),
+   L√§hliittie NUMERIC(10,1),
    Suuntlkm NUMERIC(10,1),
    Toimenpide INT,
    Toimpidsel VARCHAR(50),
@@ -149,9 +149,9 @@ CREATE TABLE Tieomin
    Valomsel VARCHAR(50),
    Poikkileik INT,
    Poikleikse VARCHAR(50),
-   P‰‰llyslev NUMERIC(10,1),
-   P‰‰llystlk INT,
-   P‰‰llksel VARCHAR(50),
+   P√§√§llyslev NUMERIC(10,1),
+   P√§√§llystlk INT,
+   P√§√§llksel VARCHAR(50),
    Nakos150 NUMERIC(10,1),
    Nakos300 NUMERIC(10,1),
    Nakos460 NUMERIC(10,1),
@@ -161,14 +161,14 @@ CREATE TABLE Tieomin
 */
 
 ------------------------
--- CREATE A TABLE VƒEST÷
+-- CREATE A TABLE V√ÑEST√ñ
 
 /*
-CREATE TABLE V‰estˆ
+CREATE TABLE V√§est√∂
    (Maakunta INT,
    Maakuntsel VARCHAR(50),
    Vuosi INT,
-   V‰estˆ INT);
+   V√§est√∂ INT);
 */
 
 -------------------------------------
