@@ -29,8 +29,11 @@
 -----------------------------
 -- DELETE ALL DATA FROM TABLE
 
---DELETE FROM Väestö;
+--DELETE FROM Osalliset;
 
+-- DELETE DATA FROM TABLE BASED ON A CRITERIA
+
+--DELETE FROM Onnettomuudet WHERE  Vuosi < 2009;
 
 --------------------------------------------------------------------------------
 -- QUERY INCIDENT SERIOUS WITH INCIDENT TYPES, INVOLVED, CONDITIONS AND LOCATION

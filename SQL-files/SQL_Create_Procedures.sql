@@ -15,8 +15,8 @@ BEGIN
 		o.Onnett_id AS Onnett_nro,
 		Onlksel AS Onnett_luokka,
 		Onnpaiksel AS Onnettomuuspaikka,
-		Loukk AS Loukkantuneita,
-		Oslajisel AS Osallisen_laji
+		os.Loukk AS Loukkantuneita,
+		os.Oslajisel AS Osallisen_laji
     FROM 
         Onnettomuudet o
 	INNER JOIN Osalliset os
@@ -29,8 +29,8 @@ BEGIN
 		o.Onnett_id,
 		Onlksel,
 		Onnpaiksel,
-		Loukk,
-		Oslajisel;
+		os.Loukk,
+		os.Oslajisel;
 END;
 */
 
@@ -52,9 +52,9 @@ BEGIN
 		o.Onnett_id AS Onnett_nro,
 		Onlksel AS Onnett_luokka,
 		Onnpaiksel AS Onnettomuuspaikka,
-		Kuollut AS Kuolleita,
-		Loukk AS Loukkaantuneita,
-		Oslajisel AS Osallisen_laji
+		os.Kuollut AS Kuolleita,
+		os.Loukk AS Loukkaantuneita,
+		os.Oslajisel AS Osallisen_laji
     FROM 
         Onnettomuudet o
 	INNER JOIN Osalliset os
@@ -67,9 +67,9 @@ BEGIN
 		o.Onnett_id,
 		Onlksel,
 		Onnpaiksel,
-		Kuollut,
-		Loukk,
-		Oslajisel;
+		os.Kuollut,
+		os.Loukk,
+		os.Oslajisel;
 END;
 */
 
@@ -78,8 +78,8 @@ END;
 EXEC uspGetKuoll_Osall 2017
 */
 
-------------------------------------------------------------
--- QUERY INCIDENT SERIOUS WITH INCIDENT TYPES AND CONDITIONS
+----------------------------------------------------------------------
+-- QUERY INCIDENT SERIOUS WITH INVOLVED, INCIDENT TYPES AND CONDITIONS
 -- WITHOUT MILD INCIDENT BY SELECTED YEAR
 
 /*
@@ -88,12 +88,17 @@ AS
 BEGIN
     SELECT
         o.Vuosi,
+		o.Onnett_id AS Onnett_nro,
 	    Kk AS Kuukausi,
 	    Vkpv AS Viikonpäivä,
 	    Tunti,
 	    Vakavuus,
 	    Loukkaant AS Loukkaantuneet,
 	    Kuolleet,
+		os.Oslajisel AS Osallisen_laji,
+		os.Kuollut AS Kuolleita,
+		os.Loukk AS Loukkaantuneita,
+		os.Ajoneuvika AS Ajon_ikä,
 	    Onlksel AS Onnett_Luokka,
 	    Ontyypsel AS Onnett_Tyyppi,
 	    Onnpaiksel AS Onnett_Paikka,
@@ -110,17 +115,24 @@ BEGIN
     INNER JOIN Tieomin t
         ON o.tieomin_id = t.tieomin_id AND
 	    o.Vuosi = t.Vuosi
+	INNER JOIN Osalliset os
+        ON o.Onnett_id = os.Onnett_id
 	WHERE
         o.Vuosi = @vuosi AND
 		Vakavuusko > 0
     GROUP BY 
         o.Vuosi,
+		o.Onnett_id,
 	    Kk,
 	    Vkpv,
 	    Tunti,
 	    Vakavuus,
 	    Loukkaant,
 	    Kuolleet,
+		os.Oslajisel,
+		os.Kuollut,
+		os.Loukk,
+		os.Ajoneuvika,
 	    Onlksel,
 	    Ontyypsel,
 	    Onnpaiksel,
@@ -140,8 +152,8 @@ END;
 EXEC uspGetVakOnnett_Olos 2017
 */
 
-----------------------------------------------------------------------
--- QUERY INCIDENT SERIOUS WITH INCIDENT TYPES, CONDITIONS AND LOCATION
+-------------------------------------------------------------------------------
+-- QUERY INCIDENT SERIOUS WITH INVOLVED INCIDENT TYPES, CONDITIONS AND LOCATION
 -- WITHOUT MILD INCIDENT BY SELECTED YEAR
 
 /*
@@ -150,12 +162,17 @@ AS
 BEGIN
     SELECT
         o.Vuosi,
+		o.Onnett_id AS Onnett_nro,
 	    Kk AS Kuukausi,
 	    Vkpv AS Viikonpäivä,
 	    Tunti,
 	    Vakavuus,
 	    Loukkaant AS Loukkaantuneet,
 	    Kuolleet,
+		os.Oslajisel AS Osallisen_laji,
+		os.Kuollut AS Kuolleita,
+		os.Loukk AS Loukkaantuneita,
+		os.Ajoneuvika AS Ajon_ikä,
 	    Onlksel AS Onnett_Luokka,
 	    Ontyypsel AS Onnett_Tyyppi,
 	    Onnpaiksel AS Onnett_Paikka,
@@ -165,7 +182,7 @@ BEGIN
 	    Sääsel AS Sää,
 	    Lämpötila,
 	    a.Maakuntsel AS Maakunta,
-		Väestö,
+		v.Väestö,
 	    a.Kuntasel AS Kunta,
 	    Katuosoite,
 	    [position.lat],
@@ -176,18 +193,25 @@ BEGIN
         ON o.alue_id = a.alue_id
 	INNER JOIN Väestö v
         ON o.Vuosi = v.Vuosi
+	INNER JOIN Osalliset os
+        ON o.Onnett_id = os.Onnett_id
 	WHERE
         o.Vuosi = @vuosi AND
 		a.Maakuntsel = v.Maakuntsel AND
 		Vakavuusko > 0
     GROUP BY 
         o.Vuosi,
+		o.Onnett_id,
 	    Kk,
 	    Vkpv,
 	    Tunti,
 		Vakavuus,
 	    Loukkaant,
 	    Kuolleet,
+		os.Oslajisel,
+		os.Kuollut,
+		os.Loukk,
+		os.Ajoneuvika,
 	    Onlksel,
 	    Ontyypsel,
 	    Onnpaiksel,
@@ -197,7 +221,7 @@ BEGIN
 	    Sääsel,
 	    Lämpötila,
 	    a.Maakuntsel,
-		Väestö,
+		v.Väestö,
 	    a.Kuntasel,
 	    Katuosoite,
 	    [position.lat],
