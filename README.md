@@ -28,7 +28,7 @@ SQL Server tietokantaan tehtyjen kyselyjen perusteella luotuja datatiedostoja ta
 Käsittelyyn luotiin eri tarkoituksia varten python koodeja. Koodit on tehty Jupyter Notebookissa.
 - Paikkatiedon muunnokset kansallisesta kansainväliseen formaattiin (Coord_Conversion_for_Files.ipynb)
 - Muunnoksen jälkeen tiedostot pilkottiin kolmeen osaan luotujen tietokannan taulujen mukaan (Editing_Files_for_DB.ipynb)
-- Ennen tietokantaan vientiä pilkotuista tiedostoista tarkistettiin sisältövirheitä ja sarake-eroja, jotka aiheuttavat virheitä tietokantaan viennissä (Check_file_error.ipynb ja Check_file_columns.ipynb). Raportoinnissa havaittiin lähdedatassa suuri määrä sisältövirheitä, jotka vääristivät raportointia. Virheitä korjattiin tietosisällön kuvauksen mukaiseen muotoon sekä etsittiin säännönmukaisuutta esim. koordinaattivirheisiin, jotta ne valtaosaltaan voitiin korjata.
+- Ennen tietokantaan vientiä pilkotuista tiedostoista tarkistettiin sisältövirheitä ja sarake-eroja, jotka aiheuttavat virheitä tietokantaan viennissä (Check_file_error.ipynb ja Check_file_columns.ipynb). Raportoinnissa havaittiin lähdedatassa suuri määrä sisältövirheitä, jotka vääristivät raportointia. Virheitä korjattiin tietosisällön kuvauksen mukaiseen muotoon sekä etsittiin säännönmukaisuutta esim. koordinaattivirheisiin, jotta ne valtaosaltaan voitiin korjata pythonilla ja SQL komennoilla.
 - Osa vuosittaisista tiedostoista voitiin pilkkomisen jälkeen yhdistää yhdeksi (File_merge_for_DB.ipynb)
 - Tiedostojen siirtoon SQL Serveriin ja MongoDB Atlakseen sekä niistä haku takaisin tiedostoiksi (Insert_data_to_sqlserver.ipynb, Insert_Data_to_MongoDB.ipynb ja Get_Data_from_MongoDB.ipynb)
 
