@@ -45,3 +45,9 @@ Raportoinnnissa tietoa pyritään analysoimaan etsimällä siinä esiintyviä pi
 <p align="center">
 <img src="https://user-images.githubusercontent.com/110663840/183087903-71838152-038a-4fda-b9b0-7e28f7559063.png" width="750" height="392">
 </p>
+
+### Linkit MongoDB Atlas raporttiesimerkkeihin
+
+https://charts.mongodb.com/charts-opiframe-dvsup/public/dashboards/79658628-7142-4063-962d-8d7fad43de02
+https://charts.mongodb.com/charts-opiframe-dvsup/public/dashboards/1250830d-e31f-4fe5-902e-b5ac1c136f11
+https://charts.mongodb.com/charts-opiframe-dvsup/public/dashboards/c37f458d-17f3-42f2-9ceb-62b895655eca
