@@ -18,7 +18,7 @@ Väyläviraston ja Tilastokeskuksen tarjoamat csv –muotoiset tiedostot 35 kpl 
 - Vuosittaisten tiedostojen suuren koon vuoksi (yhteensä lähes 300 Mb) niiden sisältämistä tiedoista puoletkaan eivät sopineet MongoDB:n ilmaiseen tallennustilaan (MongoDB muuntaa joka tietorivin kokoelmaansa yhdeksi dokumentiksi).
 
 Käsitellyt tiedot tallennettiin SQL Serveriin luotuun tietokantaan ja sen tauluihin.
-- Tallennettavan tiedon määrää saatiin pienennettyä luomalla tiedoissa toistuvasti esiintyviä selkeitä tietorakenteita varten omat taulut 5 kpl (olisi voinut enemmänkin hajauttaa) ja määriteltiin niille tietojen väliset riippuvuudet.
+- Tallennettavan tiedon määrää saatiin pienennettyä luomalla tiedoissa toistuvasti esiintyviä selkeitä tietorakenteita varten omat taulut 5 kpl (olisi voinut enemmänkin hajauttaa) ja määriteltiin niille tietojen väliset riippuvuudet (SQL_Create_Tables.sql).
 
 SQL Server tietokantaan tehtyjen kyselyjen perusteella luotuja datatiedostoja tallennettu MongoDB Atlaksen ilmaiseen tietovarastoon.
 - Kyselyillä rajattiin tallennettavaa tietomäärää vain siihen, jota arveltiin voivan tarvita MongoDB:llä tehtävässä visualisoinnissa.
@@ -28,14 +28,14 @@ SQL Server tietokantaan tehtyjen kyselyjen perusteella luotuja datatiedostoja ta
 Käsittelyyn luotiin eri tarkoituksia varten python koodeja. Koodit on tehty Jupyter Notebookissa.
 - Paikkatiedon muunnokset kansallisesta kansainväliseen formaattiin (Coord_Conversion_for_Files.ipynb)
 - Muunnoksen jälkeen tiedostot pilkottiin kolmeen osaan luotujen tietokannan taulujen mukaan (Editing_Files_for_DB.ipynb)
-- Ennen tietokantaan vientiä pilkotuista tiedostoista tarkistettiin sisältövirheitä ja sarake-eroja, jotka aiheuttavat virheitä tietokantaan viennissä (Check_file_error.ipynb ja Check_file_columns.ipynb). Raportoinnissa havaittiin lähdedatassa suuri määrä sisältövirheitä, jotka vääristivät raportointia. Virheitä korjattiin tietosisällön kuvauksen mukaiseen muotoon sekä etsittiin säännönmukaisuutta esim. koordinaattivirheisiin, jotta ne valtaosaltaan voitiin korjata pythonilla ja SQL komennoilla.
+- Ennen tietokantaan vientiä pilkotuista tiedostoista tarkistettiin sisältövirheitä ja sarake-eroja, jotka aiheuttavat virheitä tietokantaan viennissä (Check_file_error.ipynb ja Check_file_columns.ipynb). Raportoinnissa havaittiin lähdedatassa suuri määrä sisältövirheitä, jotka vääristivät raportointia. Virheitä korjattiin tietosisällön kuvauksen mukaiseen muotoon sekä etsittiin säännönmukaisuutta esim. koordinaattivirheisiin, jotta ne valtaosaltaan voitiin korjata pythonilla ja SQL komennoilla (SQL_Test_Queries.sql ja SQL_Correct_Errors.sql).
 - Osa vuosittaisista tiedostoista voitiin pilkkomisen jälkeen yhdistää yhdeksi (File_merge_for_DB.ipynb)
 - Tiedostojen siirtoon SQL Serveriin ja MongoDB Atlakseen sekä niistä haku takaisin tiedostoiksi (Insert_data_to_sqlserver.ipynb, Insert_Data_to_MongoDB.ipynb ja Get_Data_from_MongoDB.ipynb)
 
 ### Tietojen raportointi
 
 Raportoinnnissa tietoa pyritään analysoimaan etsimällä siinä esiintyviä piirteitä, ominaisuuksia ja niiden keskinäisiä riippuvuuksia. Analysointia merkittävästi helpottaa, jos haluttuja asioita visualisoidaan. Visualisointia tehtiin sekä Pythonilla (Jupyter Notebook) ja MongoDB Atlaksella
-- Jupyter Notebookissa visualisointiin tarvittavat tiedot haettiin SQL Server tietokannasta python koodilla joko tekemällä haun yhteydessä SQL kysely tai käyttämällä muutamaa SQL serveriin tallennettua Viewiä tai Stored Proceduria
+- Jupyter Notebookissa visualisointiin tarvittavat tiedot haettiin SQL Server tietokannasta python koodilla joko tekemällä haun yhteydessä SQL kysely tai käyttämällä muutamaa SQL serveriin tallennettua Viewiä tai Stored Proceduria (SQL_Create_Views.sql ja SQL_Create_Procedures.sql)
 - MongoDB Atlaksen tietovarastoon tallennettiin python koodilla muutamia kokoelmia, joiden sisältö määriteltiin tallennusta varten tehtävän tiedoston SQL kyselyssä joko tekemällä haun yhteydessä SQL kysely tai käyttämällä muutamaa SQL serveriin tallennettua Viewiä tai Stored Proceduria
 - SQL Serverin Viewit sisälsivät sellaisia tietokenttiä, joilla visualisoinnin yleisimmät tarpeet täyttyvät.
 - SQL Serverin Stored Procedurit sisälsivät enemmän tietokenttiä, hakua rajoitettiin sen kutsussa muuttujana annettavan tiedon mukaan (Vuosi).
