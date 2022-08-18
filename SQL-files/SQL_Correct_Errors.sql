@@ -6,6 +6,9 @@
 
 --ALTER TABLE dbo.Onnettomuudet ALTER COLUMN Vkpv VARCHAR(15);
 
+-- ADD NEW COLUMN TO TABLE
+
+--ALTER TABLE dbo.Alueet ADD Maak_Loc VARCHAR(5);
 
 ------------------------
 -- DROP TABLES IF NEEDED
@@ -152,3 +155,54 @@ ON Onnettomuudet.Onnett_id = Temp_Onn_Coord.Onnett_id
 --DROP TABLE dbo.Temp_Onn_Coord;  
 --GO
 
+---------------------------------------------------------------------------
+-- CREATE A TABLE TEMP_ALUEET FOR UPDATING ISO-3166-2 LOCATIONS FOR REGIONS
+
+/*
+CREATE TABLE Temp_Alueet  
+   (Maakunta INT PRIMARY KEY NOT NULL,
+   Maakuntsel VARCHAR(50),
+   ISO_3166_2 VARCHAR(5));
+*/
+
+/*
+INSERT INTO Temp_Alueet(Maakunta, Maakuntsel, Maak_Loc) 
+VALUES 
+(0,'Ei tiedossa',NULL),
+(1,'Uusimaa','FI-18'),
+(2,'Varsinais-Suomi','FI-19'),
+(4,'Satakunta','FI-17'),
+(5,'Kanta-Häme','FI-06'),
+(6,'Pirkanmaa','FI-11'),
+(7,'Päijät-Häme','FI-16'),
+(8,'Kymenlaakso','FI-09'),
+(9,'Etelä-Karjala','FI-02'),
+(10,'Etelä-Savo','FI-04'),
+(11,'Pohjois-Savo','FI-15'),
+(12,'Pohjois-Karjala','FI-13'),
+(13,'Keski-Suomi','FI-08'),
+(14,'Etelä-Pohjanmaa','FI-03'),
+(15,'Pohjanmaa','FI-12'),
+(16,'Keski-Pohjanmaa','FI-07'),
+(17,'Pohjois-Pohjanmaa','FI-14'),
+(18,'Kainuu','FI-05'),
+(19,'Lappi','FI-10');
+*/
+
+/*
+UPDATE Alueet
+SET 
+Alueet.Maak_Loc=Temp_Alueet.Maak_Loc
+FROM Alueet
+INNER JOIN Temp_Alueet
+ON Alueet.Maakunta = Temp_Alueet.Maakunta
+*/
+
+--SELECT * FROM Temp_Alueet;
+
+--SELECT * FROM Alueet;
+
+--DELETE FROM Temp_Alueet
+
+--DROP TABLE dbo.Temp_Alueet;  
+--GO
