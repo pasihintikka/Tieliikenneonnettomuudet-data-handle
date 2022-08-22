@@ -9,6 +9,7 @@
 CREATE OR ALTER VIEW vuos_maak_onnett (
     Vuosi,
 	Maakunta,
+    Maak_Loc,
 	Väestö,
 	lkm_onnett, 
     lkm_kuolleet,
@@ -18,6 +19,7 @@ AS
 SELECT
     o.Vuosi,
 	a.Maakuntsel,
+    a.Maak_Loc,
 	v.Väestö,
 	COUNT(Onnett_id) lkm_onnett, 
     SUM(Kuolleet) lkm_kuolleet,
@@ -33,6 +35,7 @@ WHERE
 GROUP BY 
     o.Vuosi,
 	a.Maakuntsel,
+    a.Maak_Loc,
 	v.Väestö;
 */
 
@@ -53,6 +56,7 @@ SELECT
     o.Onnett_id,
 	o.Vuosi,
     a.Maakuntsel AS Maakunta,
+    a.Maak_Loc,
     v.Väestö,
     Vakavuus,
     Onlksel AS Onnett_Luokka,
@@ -69,6 +73,7 @@ GROUP BY
     o.Onnett_id,
 	o.Vuosi,
     a.Maakuntsel,
+    a.Maak_Loc,
 	v.Väestö,
     Vakavuus,
     Onlksel,
@@ -170,6 +175,7 @@ SELECT
 	Sääsel AS Sää,
 	Lämpötila,
 	a.Maakuntsel AS Maakunta,
+	a.Maak_Loc,
 	v.Väestö,
 	a.Kuntasel AS Kunta,
 	Katuosoite,
@@ -202,6 +208,7 @@ GROUP BY
 	Sääsel,
 	Lämpötila,
 	a.Maakuntsel,
+	a.Maak_Loc,
 	v.Väestö,
 	a.Kuntasel,
 	Katuosoite,
