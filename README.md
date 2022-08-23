@@ -51,3 +51,7 @@ Raportoinnnissa tietoa pyritään analysoimaan etsimällä siinä esiintyviä pi
 - Lukumääriä palkkikaavioina [Barcharts sample](https://charts.mongodb.com/charts-opiframe-dvsup/public/dashboards/79658628-7142-4063-962d-8d7fad43de02)
 - Lukumääriä kartalla paikkatiedon mukaan [Geomaps sample](https://charts.mongodb.com/charts-opiframe-dvsup/public/dashboards/1250830d-e31f-4fe5-902e-b5ac1c136f11)
 - Lukumääriä riippuvuustaulukoissa [Heatmaps sample](https://charts.mongodb.com/charts-opiframe-dvsup/public/dashboards/c37f458d-17f3-42f2-9ceb-62b895655eca)
+
+### Linkit Google Data Studio raporttiesimerkkeihin
+
+- Lukumääriä ja jakaumia taulukoina, kaavioina sekä kartta-alueina [Sample Onnettomuudet](https://datastudio.google.com/reporting/45f072ec-9a91-4ae3-9ebb-2b06cfe717ab)
