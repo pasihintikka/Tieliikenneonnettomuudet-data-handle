@@ -26,15 +26,17 @@ SQL Server tietokantaan tehtyjen kyselyjen perusteella luotuja datatiedostoja ta
 ### Tietojen käsittely
 
 Käsittelyyn luotiin eri tarkoituksia varten python koodeja. Koodit on tehty Jupyter Notebookissa.
-- Paikkatiedon muunnokset kansallisesta kansainväliseen formaattiin (Coord_Conversion_for_Files.ipynb).
-- Muunnoksen jälkeen tiedostot pilkottiin kolmeen osaan luotujen tietokannan taulujen mukaan (Editing_Files_for_DB.ipynb).
-- Ennen tietokantaan vientiä pilkotuista tiedostoista tarkistettiin sisältövirheitä ja sarake-eroja, jotka aiheuttavat virheitä tietokantaan viennissä (Check_file_error.ipynb ja Check_file_columns.ipynb). Raportoinnissa havaittiin lähdedatassa suuri määrä sisältövirheitä, jotka vääristivät raportointia. Virheitä korjattiin tietosisällön kuvauksen mukaiseen muotoon sekä etsittiin säännönmukaisuutta esim. koordinaattivirheisiin, jotta ne valtaosaltaan voitiin korjata pythonilla ja SQL komennoilla (SQL_Test_Queries.sql ja SQL_Correct_Errors.sql).
-- Osa vuosittaisista tiedostoista voitiin pilkkomisen jälkeen yhdistää yhdeksi (File_merge_for_DB.ipynb).
-- Tiedostojen siirtoon SQL Serveriin, MongoDB Atlakseen ja Google Sheetsiin sekä niistä haku takaisin tiedostoiksi (Insert_data_to_sqlserver.ipynb, Insert_Data_to_MongoDB.ipynb, Get_Data_from_MongoDB.ipynb ja Insert_Data_to_GoogleSheet.ipynb).
+- Paikkatiedon muunnokset kansallisesta kansainväliseen formaattiin (Coord_Conversion_for_Files.ipynb)
+- Muunnoksen jälkeen tiedostot pilkottiin kolmeen osaan luotujen tietokannan taulujen mukaan (Editing_Files_for_DB.ipynb)
+- Ennen tietokantaan vientiä pilkotuista tiedostoista tarkistettiin sisältövirheitä ja sarake-eroja, jotka aiheuttavat virheitä tietokantaan viennissä (Check_file_error.ipynb ja Check_file_columns.ipynb). Raportoinnissa havaittiin lähdedatassa suuri määrä sisältövirheitä, jotka vääristivät raportointia. Virheitä korjattiin tietosisällön kuvauksen mukaiseen muotoon sekä etsittiin säännönmukaisuutta esim. koordinaattivirheisiin ja aluetietoihin, jotta ne valtaosaltaan voitiin korjata pythonilla ja SQL komennoilla (SQL_Test_Queries.sql, SQL_Correct_Errors.sql ja SQL_Correct_Alueet.sql).
+- Osa vuosittaisista tiedostoista voitiin pilkkomisen jälkeen yhdistää yhdeksi (File_merge_for_DB.ipynb)
+- Tiedostojen siirtoon SQL Serveriin, MongoDB Atlakseen ja Google Sheetsiin sekä niistä haku takaisin tiedostoiksi (Insert_data_to_sqlserver.ipynb, Insert_Data_to_MongoDB.ipynb, Get_Data_from_MongoDB.ipynb ja Insert_Data_to_GoogleSheet.ipynb)
+- SQL Serverillä tehtiin useita tietojen lisäyksiä ja korjauksia SQL komennoilla.
+
 
 ### Tietojen raportointi
 
-Raportoinnnissa tietoa pyritään analysoimaan etsimällä siinä esiintyviä piirteitä, ominaisuuksia ja niiden keskinäisiä riippuvuuksia. Analysointia merkittävästi helpottaa, jos haluttuja asioita visualisoidaan. Visualisointia tehtiin sekä Pythonilla (Jupyter Notebook), MongoDB Atlaksella ja Google Data Studiolla.
+Raportoinnnissa tietoa pyritään analysoimaan etsimällä siinä esiintyviä piirteitä, ominaisuuksia ja niiden keskinäisiä riippuvuuksia. Analysointia merkittävästi helpottaa, jos haluttuja asioita visualisoidaan. Visualisointia tehtiin sekä Pythonilla (Jupyter Notebook), MongoDB Atlaksella, Google Data Studiolla ja Microsoft PowerBI:llä.
 - Jupyter Notebookissa visualisointiin tarvittavat tiedot haettiin SQL Server tietokannasta python koodilla joko tekemällä haun yhteydessä SQL kysely tai käyttämällä muutamaa SQL serveriin tallennettua Viewiä tai Stored Proceduria (SQL_Create_Views.sql ja SQL_Create_Procedures.sql).
 - MongoDB Atlaksen tietovarastoon tallennettiin python koodilla muutamia kokoelmia, joiden sisältö määriteltiin tallennusta varten tehtävän tiedoston SQL kyselyssä joko tekemällä haun yhteydessä SQL kysely tai käyttämällä muutamaa SQL serveriin tallennettua Viewiä tai Stored Proceduria.
 - Google Data Studiossa visualisointiin tarvittavat tiedot tallennettiin python koodilla Google Sheets tiedoston välilehdille, joiden sisältö määriteltiin SQL kyselyssä käyttämällä muutamaa SQL serveriin tallennettua Viewiä tai Stored Proceduria.
