@@ -45,8 +45,7 @@ Raportoinnnissa tietoa pyritään analysoimaan etsimällä siinä esiintyviä pi
 
 ### Kaavio toteutuksesta
 
-<align="center">
-<img src="https://user-images.githubusercontent.com/110663840/199057230-ab63510a-115e-437a-a48d-d92a7bc61be8.png" width="864" height="392">
+<img src="https://user-images.githubusercontent.com/110663840/199057230-ab63510a-115e-437a-a48d-d92a7bc61be8.png" width="864" height="392" align="center">
 
 
 ### Linkit MongoDB Atlas raporttiesimerkkeihin
