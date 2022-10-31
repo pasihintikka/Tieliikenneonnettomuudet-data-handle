@@ -19,7 +19,7 @@ BEGIN
 		os.Oslajisel AS Osallisen_laji
     FROM 
         Onnettomuudet o
-	INNER JOIN Osalliset os
+	LEFT JOIN Osalliset os
         ON o.Onnett_id = os.Onnett_id
     WHERE
         Vuosi = @vuosi AND
@@ -57,7 +57,7 @@ BEGIN
 		os.Oslajisel AS Osallisen_laji
     FROM 
         Onnettomuudet o
-	INNER JOIN Osalliset os
+	LEFT JOIN Osalliset os
         ON o.Onnett_id = os.Onnett_id
     WHERE
         Vuosi = @vuosi AND
@@ -115,7 +115,7 @@ BEGIN
     INNER JOIN Tieomin t
         ON o.tieomin_id = t.tieomin_id AND
 	    o.Vuosi = t.Vuosi
-	INNER JOIN Osalliset os
+	LEFT JOIN Osalliset os
         ON o.Onnett_id = os.Onnett_id
 	WHERE
         o.Vuosi = @vuosi AND
@@ -194,7 +194,7 @@ BEGIN
         ON o.alue_id = a.alue_id
 	INNER JOIN Väestö v
         ON o.Vuosi = v.Vuosi
-	INNER JOIN Osalliset os
+	LEFT JOIN Osalliset os
         ON o.Onnett_id = os.Onnett_id
 	WHERE
         o.Vuosi = @vuosi AND
