@@ -336,7 +336,7 @@ INNER JOIN Alueet a
     ON o.alue_id = a.alue_id
 INNER JOIN Väestö v
     ON o.Vuosi = v.Vuosi
-INNER JOIN Osalliset os
+LEFT JOIN Osalliset os
     ON o.Onnett_id = os.Onnett_id
 WHERE
 	a.Maakuntsel = v.Maakuntsel
