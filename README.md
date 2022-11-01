@@ -40,8 +40,9 @@ Raportoinnnissa tietoa pyritään analysoimaan etsimällä siinä esiintyviä pi
 - Jupyter Notebookissa visualisointiin tarvittavat tiedot haettiin SQL Server tietokannasta python koodilla joko tekemällä haun yhteydessä SQL kysely tai käyttämällä muutamaa SQL serveriin tallennettua Viewiä tai Stored Proceduria (SQL_Create_Views.sql ja SQL_Create_Procedures.sql).
 - MongoDB Atlaksen tietovarastoon tallennettiin python koodilla muutamia kokoelmia, joiden sisältö määriteltiin tallennusta varten tehtävän tiedoston SQL kyselyssä joko tekemällä haun yhteydessä SQL kysely tai käyttämällä muutamaa SQL serveriin tallennettua Viewiä tai Stored Proceduria.
 - Google Data Studiossa visualisointiin tarvittavat tiedot tallennettiin python koodilla Google Sheets tiedoston välilehdille, joiden sisältö määriteltiin SQL kyselyssä käyttämällä muutamaa SQL serveriin tallennettua Viewiä tai Stored Proceduria.
-- SQL Serverin Viewit sisälsivät sellaisia tietokenttiä, joilla visualisoinnin yleisimmät tarpeet täyttyvät.
-- SQL Serverin Stored Procedurit sisälsivät enemmän tietokenttiä, hakua rajoitettiin sen kutsussa muuttujana annettavan tiedon mukaan (Vuosi).
+- Microsoft Power BI Desktopilla tehtiin tarvittavat tietolähdehaut SQL Serveristä sekä laadittiin visualisoinnit, jotka julkaistiin raportteina Power BI palvelussa.
+- SQL Serverin Viewit sisälsivät sellaisia tietokenttiä, joilla visualisoinnin yleisimmät tarpeet täyttyvät. Stored Procedurit sisälsivät enemmän tietokenttiä, hakua rajoitettiin sen kutsussa muuttujana annettavan tiedon mukaan (Vuosi).
+
 
 ### Kaavio toteutuksesta
 
@@ -58,3 +59,7 @@ Raportoinnnissa tietoa pyritään analysoimaan etsimällä siinä esiintyviä pi
 ### Linkki Google Data Studio raporttiesimerkkeihin
 
 - Lukumääriä ja jakaumia taulukoina, kaavioina sekä kartta-alueina [Sample Onnettomuudet](https://datastudio.google.com/reporting/45f072ec-9a91-4ae3-9ebb-2b06cfe717ab)
+
+### Linkki Microsoft Power BI raporttiesimerkkeihin
+
+- Lukumääriä ja jakaumia taulukoina, kaavioina sekä kartta-alueina [Sample Onnettomuudet]<a href="pasihintikka.github.io/folder/document.pdf" target="_blank">PDF.</a>
