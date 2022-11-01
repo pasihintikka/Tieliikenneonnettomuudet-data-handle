@@ -40,7 +40,7 @@ Raportoinnnissa tietoa pyritään analysoimaan etsimällä siinä esiintyviä pi
 - Jupyter Notebookissa visualisointiin tarvittavat tiedot haettiin SQL Server tietokannasta python koodilla joko tekemällä haun yhteydessä SQL kysely tai käyttämällä muutamaa SQL serveriin tallennettua Viewiä tai Stored Proceduria (SQL_Create_Views.sql ja SQL_Create_Procedures.sql).
 - MongoDB Atlaksen tietovarastoon tallennettiin python koodilla muutamia kokoelmia, joiden sisältö määriteltiin tallennusta varten tehtävän tiedoston SQL kyselyssä joko tekemällä haun yhteydessä SQL kysely tai käyttämällä muutamaa SQL serveriin tallennettua Viewiä tai Stored Proceduria.
 - Google Data Studiossa visualisointiin tarvittavat tiedot tallennettiin python koodilla Google Sheets tiedoston välilehdille, joiden sisältö määriteltiin SQL kyselyssä käyttämällä muutamaa SQL serveriin tallennettua Viewiä tai Stored Proceduria.
-- Microsoft Power BI Desktopilla tehtiin tarvittavat tietolähdehaut SQL Serveristä sekä laadittiin visualisoinnit, jotka julkaistiin raportteina Power BI palvelussa.
+- Microsoft Power BI Desktopilla tehtiin tarvittavat tietolähdehaut SQL Serveristä sekä laadittiin visualisoinnit, jotka julkaistiin raportteina ja koontinäyttönä Power BI palvelussa.
 - SQL Serverin Viewit sisälsivät sellaisia tietokenttiä, joilla visualisoinnin yleisimmät tarpeet täyttyvät. Stored Procedurit sisälsivät enemmän tietokenttiä, hakua rajoitettiin sen kutsussa muuttujana annettavan tiedon mukaan (Vuosi).
 
 
@@ -62,6 +62,6 @@ Raportoinnnissa tietoa pyritään analysoimaan etsimällä siinä esiintyviä pi
 
 ### Linkki Microsoft Power BI raporttiesimerkkeihin
 
-- Lukumääriä ja jakaumia taulukoina, kaavioina sekä kartta-alueina <a href="https://github.com/pasihintikka/Tieliikenneonnettomuudet-data-handle/blob/main/Sample_Onnettomuudet.pdf" target="_blank">PDF</a>
+- Lukumääriä ja jakaumia taulukoina, kaavioina sekä kartta-alueina <a href="https://docs.google.com/viewer?url=https://github.com/pasihintikka/Tieliikenneonnettomuudet-data-handle/blob/main/Sample_Onnettomuudet.pdf" target="_blank">PDF</a>
 - Raportteja en voi Power BI ilmaisversiolla jakaa sovelluksena. Esimerkit ovat siis kuvaleikkeitä raporteista, eivätkä raporttien toiminnallisuudet ole käytettävissä.
 
