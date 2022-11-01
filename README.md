@@ -62,4 +62,4 @@ Raportoinnnissa tietoa pyritään analysoimaan etsimällä siinä esiintyviä pi
 
 ### Linkki Microsoft Power BI raporttiesimerkkeihin
 
-- Lukumääriä ja jakaumia taulukoina, kaavioina sekä kartta-alueina <a href="github.com/pasihintikka/Tieliikenneonnettomuudet-data-handle/blob/main/Sample_Onnettomuudet.pdf" target="_blank">PDF.</a>
+- Lukumääriä ja jakaumia taulukoina, kaavioina sekä kartta-alueina <a href="https://github.com/pasihintikka/Tieliikenneonnettomuudet-data-handle/blob/main/Sample_Onnettomuudet.pdf" target="_blank">PDF.</a>
